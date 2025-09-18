@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import {
-  counterSliceAction,
+  counterSliceActions,
   counterSliceSelectors,
 } from "store/redux/counter/counterSlice"
 
@@ -20,9 +20,9 @@ function Counter() {
   const onPlus = () => {
     // counterSliceAction.plus() - это actionCreator - функция, которая возвращает 
     // нам action
-    const plusAction = counterSliceAction.plus()
+    const plusAction = counterSliceActions.plus()
     // action - это объект , состоящий из 2 пар ключ/значение 
-    // 1 - type - строка (тип экшеа), по которому у нас вызывается редьюсер. 
+    // 1 - type - строка (тип action), по которому у нас вызывается редьюсер. 
     // Например: "COUNTER/plus"
     // COUNTER - имя слайса
     // plus - имя редьюсера
@@ -34,15 +34,15 @@ function Counter() {
   }
 
   const onMinus = () => {
-    dispatch(counterSliceAction.minus())
+    dispatch(counterSliceActions.minus())
   }
 
   const onMultiply = () => {
-    dispatch(counterSliceAction.multiply(3))
+    dispatch(counterSliceActions.multiply(3))
   }
 
   const onDivide = () => {
-    dispatch(counterSliceAction.divide(4))
+    dispatch(counterSliceActions.divide(4))
   }
 
   return (
