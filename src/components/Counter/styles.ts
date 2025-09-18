@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 export const CounterWrapper = styled.div`
   display: flex;
@@ -13,14 +13,14 @@ export const CounterWrapper = styled.div`
   color: black;
   padding: 20px;
   border-radius: 10px;
-`;
+`
 
 export const ButtonControl = styled.div`
   min-width: 100px;
   max-width: 100px;
-`;
+`
 
 export const Count = styled.p`
   font-size: 40px;
   font-weight: bold;
-`;
+`
