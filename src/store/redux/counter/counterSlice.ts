@@ -1,9 +1,9 @@
-import { PayloadAction } from "@reduxjs/toolkit"
 import { createAppSlice } from "store/createAppSlice"
+import { PayloadAction } from "@reduxjs/toolkit"
 
 import { CounterSliceState } from "./types"
 
-const countreInitialState: CounterSliceState = {
+const counterInitialState: CounterSliceState = {
   count: 0,
 }
 
@@ -12,7 +12,7 @@ export const counterSlice = createAppSlice({
   // в redux devtools и создание type в action
   name: "COUNTER",
   // initialState - это state, в котором мы прописываем значение по умолчанию
-  initialState: countreInitialState,
+  initialState: counterInitialState,
   // reducers - это функция, которя возвращает объект, содержащий функции
   // редьюсеры, которые будут изменять стейт
   reducers: create => ({
@@ -42,7 +42,7 @@ export const counterSlice = createAppSlice({
 })
 
 // counterSlice сам создает action для каждого отдельного reducer
-export const counterSliceAction = counterSlice.actions
+export const counterSliceActions = counterSlice.actions
 
 // selectors - это данные, которые мы будем отдавать компонентам,
 // то есть позволять подписываеться на redux store
